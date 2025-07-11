@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
+import { Button } from "./ui/button"
 
 export function Navigation() {
   const pathname = usePathname()
@@ -33,14 +33,6 @@ export function Navigation() {
               }`}
             >
               Gallery
-            </Link>
-            <Link
-              href="/donate"
-              className={`text-lg font-medium transition-colors hover:text-orange-600 ${
-                pathname === "/donate" ? "text-orange-600" : "text-gray-700"
-              }`}
-            >
-              Donate
             </Link>
             <Button asChild className="bg-orange-500 hover:bg-orange-600">
               <Link href="/donate">Donate Now</Link>
